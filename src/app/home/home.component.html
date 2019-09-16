@@ -1,3 +1,7 @@
 <div class="movies">
-  <div class="movie" *ngFor="let movie of movies">{{movie.title}}</div>
+  <div class="movie" *ngFor="let movie of movies">
+    <a routerLink="/detail">
+      <img class="cover" [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path">
+    </a>
+  </div>
 </div>

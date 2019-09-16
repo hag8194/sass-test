@@ -7,6 +7,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { HomeComponent } from './home/home.component';
 import {RestangularModule} from 'ngx-restangular';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 export function RestangularConfigFactory(RestangularProvider) {
   RestangularProvider.setBaseUrl('https://api.themoviedb.org/3');
@@ -17,7 +18,8 @@ export function RestangularConfigFactory(RestangularProvider) {
     AppComponent,
     FirstComponent,
     SecondComponent,
-    HomeComponent
+    HomeComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
