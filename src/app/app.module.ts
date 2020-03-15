@@ -5,9 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { HomeComponent } from './home/home.component';
 import {RestangularModule} from 'ngx-restangular';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import {MoviesModule} from './movies/movies.module';
 
 export function RestangularConfigFactory(RestangularProvider) {
   RestangularProvider.setBaseUrl('https://api.themoviedb.org/3');
@@ -18,13 +17,12 @@ export function RestangularConfigFactory(RestangularProvider) {
     AppComponent,
     FirstComponent,
     SecondComponent,
-    HomeComponent,
-    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RestangularModule.forRoot(RestangularConfigFactory),
+    MoviesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
